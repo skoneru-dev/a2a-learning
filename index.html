@@ -6,23 +6,23 @@
 <title>Trase Agent Lab — Clinical Narrated Demo</title>
 <style>
 :root{
-  --bg0:#06111d;
-  --bg1:#0b2238;
-  --bg2:#123759;
-  --panel:rgba(15,34,52,.74);
-  --panel2:rgba(19,45,70,.72);
-  --line:rgba(168,205,228,.16);
-  --softLine:rgba(168,205,228,.10);
-  --text:#f5f9fd;
-  --muted:#b5cadb;
-  --cyan:#7fd5ff;
-  --cyan2:#4eb8ea;
-  --steel:#8fb9d4;
-  --mint:#7be0cf;
-  --gold:#ffd36f;
-  --red:#ff8e96;
-  --shadow:0 30px 90px rgba(0,0,0,.38);
-  --glow:0 0 44px rgba(127,213,255,.22);
+  --bg0:#0e2236;
+  --bg1:#17466d;
+  --bg2:#2b6f9f;
+  --panel:rgba(230,242,250,.16);
+  --panel2:rgba(224,239,249,.13);
+  --line:rgba(210,231,244,.26);
+  --softLine:rgba(210,231,244,.20);
+  --text:#f7fbff;
+  --muted:#c6d9e8;
+  --cyan:#8bdcff;
+  --cyan2:#4faee0;
+  --steel:#a9c9de;
+  --mint:#8ee6d7;
+  --gold:#ffd97c;
+  --red:#ff9ba4;
+  --shadow:0 18px 48px rgba(7,30,53,.18);
+  --glow:0 0 28px rgba(139,220,255,.14);
 }
 *{box-sizing:border-box}
 html,body{margin:0;width:100%;height:100%;overflow:hidden}
@@ -30,48 +30,48 @@ body{
   font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color:var(--text);
   background:
-    radial-gradient(circle at 18% 16%, rgba(127,213,255,.10), transparent 28%),
-    radial-gradient(circle at 88% 78%, rgba(123,224,207,.07), transparent 32%),
-    linear-gradient(135deg,var(--bg0),var(--bg1) 52%,var(--bg2));
+    radial-gradient(circle at 16% 14%, rgba(177,226,255,.22), transparent 30%),
+    radial-gradient(circle at 86% 78%, rgba(142,230,215,.12), transparent 34%),
+    linear-gradient(135deg,var(--bg0),var(--bg1) 48%,var(--bg2));
 }
-.aurora{position:fixed;inset:-28%;pointer-events:none;filter:blur(82px);opacity:.72;
-  background:conic-gradient(from 180deg, transparent, rgba(127,213,255,.08), transparent, rgba(123,224,207,.08), transparent, rgba(143,185,212,.08), transparent);
+.aurora{position:fixed;inset:-28%;pointer-events:none;filter:blur(82px);opacity:.82;
+  background:conic-gradient(from 180deg, transparent, rgba(177,226,255,.16), transparent, rgba(142,230,215,.10), transparent, rgba(205,228,244,.14), transparent);
   animation:spin 28s linear infinite;
 }
 .grid{position:fixed;inset:0;pointer-events:none;opacity:.35;
-  background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
   background-size:56px 56px;
   mask-image:radial-gradient(circle at 50% 48%, black, transparent 78%);
 }
 @keyframes spin{to{transform:rotate(360deg)}}
 
-.stage{position:relative;z-index:2;width:100vw;height:100vh;padding:22px;display:grid;grid-template-rows:auto 1fr auto;gap:16px}
+.stage{position:relative;z-index:2;width:100vw;height:100vh;padding:20px;display:grid;grid-template-rows:auto 1fr auto;gap:14px}
 header,footer{display:flex;align-items:center;justify-content:space-between;gap:14px}
-.brand img{height:38px;width:auto;display:block}
+.brand img{height:34px;width:auto;display:block}
 .pills{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 .pill{
   padding:8px 12px;border-radius:999px;
   border:1px solid var(--line);
-  background:rgba(255,255,255,.04);
+  background:rgba(235,247,255,.09);
   color:#dce9f4;
   font-size:12px;letter-spacing:.01em;
   backdrop-filter:blur(14px);
 }
 
-main{min-height:0;display:grid;grid-template-columns:minmax(250px,280px) 1fr;gap:16px}
+main{min-height:0;display:grid;grid-template-columns:minmax(248px,274px) 1fr;gap:14px}
 .panel{
   min-height:0;border:1px solid var(--line);
-  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+  background:linear-gradient(180deg,rgba(235,247,255,.13),rgba(224,240,250,.065));
   border-radius:28px;box-shadow:var(--shadow);backdrop-filter:blur(24px);
 }
-.side{padding:16px;display:flex;flex-direction:column;gap:12px;overflow:auto}
-.kicker{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--cyan)}
-.heroTitle{font-size:23px;line-height:1.04;letter-spacing:-.05em;font-weight:900}
-.heroSub{font-size:13px;line-height:1.42;color:var(--muted);max-width:230px}
+.side{padding:15px;display:flex;flex-direction:column;gap:10px;overflow:auto}
+.kicker{font-size:9px;letter-spacing:.17em;text-transform:uppercase;font-weight:800;color:var(--cyan)}
+.heroTitle{font-size:19px;line-height:1.08;letter-spacing:-.035em;font-weight:800}
+.heroSub{font-size:12px;line-height:1.45;color:var(--muted);max-width:220px}
 
 .metricPrimary,.metricMini,.beat{
   border:1px solid var(--softLine);
-  background:linear-gradient(90deg,rgba(8,20,34,.86),rgba(16,41,64,.70));
+  background:linear-gradient(90deg,rgba(21,58,89,.82),rgba(35,95,135,.62));
   box-shadow:inset 0 1px 0 rgba(255,255,255,.03);
 }
 .metricPrimary{
@@ -87,27 +87,27 @@ main{min-height:0;display:grid;grid-template-columns:minmax(250px,280px) 1fr;gap
   line-height:.86;letter-spacing:-.07em;font-weight:950;
   white-space:nowrap;
 }
-.metricLabel{font-size:11px;color:var(--muted);margin-top:8px;letter-spacing:.02em}
-.spark{height:30px;margin-top:10px}
+.metricLabel{font-size:10px;color:var(--muted);margin-top:6px;letter-spacing:.02em}
+.spark{height:24px;margin-top:8px}
 .spark svg{width:100%;height:100%}
 .spark path{fill:none;stroke:var(--cyan);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:180;stroke-dashoffset:180;animation:draw 2.7s ease infinite alternate;filter:drop-shadow(0 0 8px rgba(127,213,255,.45))}
 @keyframes draw{to{stroke-dashoffset:0}}
 
-.metricGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.metricGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .metricMini{position:relative;border-radius:22px;padding:14px 14px;min-height:84px;overflow:hidden}
-.metricMini .metricNumber{font-size:clamp(28px,3vw,40px)}
+.metricMini .metricNumber{font-size:clamp(24px,2.5vw,34px)}
 
-.beatList{display:flex;flex-direction:column;gap:8px;margin-top:auto}
+.beatList{display:flex;flex-direction:column;gap:7px;margin-top:auto}
 .beat{display:grid;grid-template-columns:10px 1fr;gap:10px;align-items:center;padding:10px 11px;border-radius:14px;transition:.28s ease}
 .beat i{width:10px;height:10px;border-radius:50%;background:rgba(180,202,220,.50);box-shadow:0 0 10px currentColor}
-.beat span{font-size:12px;color:#dfebf5}
-.beat.active{border-color:rgba(127,213,255,.40);background:linear-gradient(90deg,rgba(18,45,68,.95),rgba(21,56,84,.88));transform:translateX(4px);box-shadow:0 0 20px rgba(127,213,255,.10)}
+.beat span{font-size:11px;color:#eef7fd;letter-spacing:.01em}
+.beat.active{border-color:rgba(127,213,255,.40);background:linear-gradient(90deg,rgba(40,103,145,.86),rgba(61,130,171,.74));transform:translateX(4px);box-shadow:0 0 20px rgba(127,213,255,.10)}
 .beat.active i{background:var(--cyan);color:var(--cyan)}
 
 .cinema{position:relative;overflow:hidden;border-radius:28px;background:
-  radial-gradient(circle at 50% 48%, rgba(127,213,255,.15), transparent 33%),
-  radial-gradient(circle at 50% 58%, rgba(123,224,207,.08), transparent 46%),
-  linear-gradient(180deg, rgba(8,18,30,.80), rgba(11,28,46,.76));
+  radial-gradient(circle at 50% 46%, rgba(177,226,255,.23), transparent 34%),
+  radial-gradient(circle at 50% 60%, rgba(142,230,215,.10), transparent 48%),
+  linear-gradient(180deg, rgba(20,53,83,.78), rgba(26,74,111,.70));
 }
 .canvas{position:absolute;inset:0;width:100%;height:100%}
 .ring{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid rgba(160,192,214,.14);border-radius:50%;animation:pulseRing 5.2s ease-in-out infinite}
@@ -117,6 +117,7 @@ main{min-height:0;display:grid;grid-template-columns:minmax(250px,280px) 1fr;gap
 .beam{fill:none;stroke-width:3.3;stroke-linecap:round;stroke-dasharray:10 14;animation:dash 2s linear infinite;opacity:.26;filter:drop-shadow(0 0 8px rgba(127,213,255,.30));transition:all .35s ease}
 .beam.gold{stroke:var(--gold)} .beam.cyan{stroke:var(--cyan)} .beam.mint{stroke:var(--mint)} .beam.red{stroke:var(--red)}
 .beam.hot{opacity:1;stroke-width:5.8;filter:drop-shadow(0 0 20px currentColor)}
+.beam.reverse{animation-direction:reverse}
 .beam.off{opacity:.07;filter:none}
 @keyframes dash{to{stroke-dashoffset:-48}}
 
@@ -126,7 +127,7 @@ main{min-height:0;display:grid;grid-template-columns:minmax(250px,280px) 1fr;gap
 @keyframes coreBeat{0%,100%{transform:scale(.97)}50%{transform:scale(1.07)}}
 
 .node{width:118px;height:118px;border-radius:30px;border:1px solid rgba(173,201,220,.18);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.035));display:grid;place-items:center;box-shadow:0 16px 50px rgba(0,0,0,.28)}
-.glyph{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:rgba(8,20,34,.44);border:1px solid rgba(173,201,220,.14)}
+.glyph{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:rgba(17,49,78,.46);border:1px solid rgba(173,201,220,.14)}
 .glyph svg{width:36px;height:36px;stroke:#e7f2fa;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .human{left:50%;top:15%;transform:translate(-50%,-50%);border-color:rgba(255,211,111,.28)}
 .agentA{left:18%;top:44%;transform:translate(-50%,-50%);border-color:rgba(123,224,207,.25)}
@@ -148,18 +149,19 @@ main{min-height:0;display:grid;grid-template-columns:minmax(250px,280px) 1fr;gap
 .pF{offset-path:path("M 552 260 C 650 375 730 438 840 490");background:var(--red);box-shadow:0 0 18px var(--red);animation-delay:-5.5s}
 @keyframes travel{to{offset-distance:100%}}
 .packet.hot{width:18px;height:18px;opacity:1;animation-duration:4.6s}
+.packet.reverse{animation-direction:reverse}
 .packet.off{opacity:.10}
 
-.label{position:absolute;z-index:12;transform:translate(-50%,-50%);padding:7px 10px;border-radius:999px;border:1px solid rgba(173,201,220,.14);background:rgba(8,20,34,.52);backdrop-filter:blur(16px);color:#e1edf6;font-size:11px;opacity:.84;transition:all .35s ease}
+.label{position:absolute;z-index:12;transform:translate(-50%,-50%);padding:7px 10px;border-radius:999px;border:1px solid rgba(173,201,220,.14);background:rgba(17,49,78,.56);backdrop-filter:blur(16px);color:#f0f8fe;font-size:11px;opacity:.84;transition:all .35s ease}
 .l-human{left:50%;top:28%} .l-agentA{left:27%;top:54%} .l-agentB{left:73%;top:54%} .l-store{left:50%;top:67%} .l-gate{left:50%;top:39%;color:var(--cyan)}
 .label.active{font-size:13px;opacity:1;border-color:rgba(127,213,255,.42);box-shadow:0 0 20px rgba(127,213,255,.18)}
 .label.dim{opacity:.14}
 
-.captionBox{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:20;min-width:360px;max-width:780px;text-align:center;padding:16px 24px;border-radius:999px;border:1px solid rgba(127,213,255,.22);background:rgba(8,20,34,.72);backdrop-filter:blur(18px);box-shadow:var(--glow)}
+.captionBox{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:20;min-width:360px;max-width:780px;text-align:center;padding:16px 24px;border-radius:999px;border:1px solid rgba(127,213,255,.22);background:rgba(18,54,84,.76);backdrop-filter:blur(18px);box-shadow:var(--glow)}
 .captionBox span{display:block;font-size:18px;line-height:1.1;font-weight:900;letter-spacing:-.03em}
 .captionBox small{display:block;margin-top:5px;font-size:12px;color:var(--muted)}
 
-.playOverlay{position:absolute;inset:0;z-index:40;display:grid;place-items:center;background:radial-gradient(circle at 50% 50%, rgba(127,213,255,.12), rgba(8,20,34,.80) 58%, rgba(8,20,34,.90));transition:.42s ease}
+.playOverlay{position:absolute;inset:0;z-index:40;display:grid;place-items:center;background:radial-gradient(circle at 50% 50%, rgba(177,226,255,.18), rgba(18,54,84,.76) 58%, rgba(14,42,67,.86));transition:.42s ease}
 .playOverlay.hidden{opacity:0;pointer-events:none}
 .playCard{width:min(540px,86vw);padding:32px;border-radius:32px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));box-shadow:var(--shadow),var(--glow);backdrop-filter:blur(22px);text-align:center}
 .playCard img{height:34px;width:auto;margin:0 auto 18px auto;display:block}
@@ -180,7 +182,7 @@ footer{padding:0 2px}
 .progressTrack{width:340px;height:10px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);overflow:hidden}
 .progressBar{height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--cyan2),var(--cyan),var(--mint));transition:width 1s ease}
 .controlRow{display:flex;gap:8px}
-.smallBtn{padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#e2eef7;font-size:12px;font-weight:800;cursor:pointer}
+.smallBtn{padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(235,247,255,.09);color:#f0f8fe;font-size:12px;font-weight:800;cursor:pointer}
 .smallBtn:hover{border-color:rgba(127,213,255,.32);box-shadow:0 0 18px rgba(127,213,255,.12)}
 
 @media (max-height: 820px){
@@ -199,6 +201,122 @@ footer{padding:0 2px}
   header,footer{flex-direction:column;align-items:flex-start}
   .progressTrack{width:260px}
 }
+
+/* v7 left-rail refinement */
+.side{
+  padding:18px;
+  gap:12px;
+  background:
+    linear-gradient(180deg, rgba(238,248,255,.10), rgba(218,238,250,.045));
+}
+.sideIntro{
+  padding:2px 2px 8px;
+}
+.kicker{
+  font-size:9px !important;
+  letter-spacing:.22em !important;
+  color:#a7e5ff !important;
+  margin-bottom:14px;
+}
+.heroTitle{
+  font-size:18px !important;
+  line-height:1.12 !important;
+  letter-spacing:-.035em !important;
+  font-weight:780 !important;
+  color:#f4f9fd;
+  max-width:230px;
+}
+.heroSub{
+  font-size:11.5px !important;
+  line-height:1.5 !important;
+  color:#c7d9e7 !important;
+  max-width:226px !important;
+  margin-top:10px;
+}
+.metricPrimary{
+  min-height:0 !important;
+  border-radius:18px !important;
+  padding:13px 14px !important;
+  background:
+    linear-gradient(135deg, rgba(28,76,112,.70), rgba(42,105,145,.46)) !important;
+  border:1px solid rgba(203,229,244,.18) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.06),
+    0 10px 26px rgba(7,30,53,.10) !important;
+}
+.metricPrimary::after,
+.metricMini::after{
+  opacity:.55;
+  width:120px !important;
+  height:120px !important;
+  right:-54px !important;
+  bottom:-62px !important;
+}
+.metricPrimary .metricNumber{
+  font-size:34px !important;
+  line-height:1 !important;
+  letter-spacing:-.045em !important;
+  font-weight:820 !important;
+}
+.metricPrimary .metricLabel{
+  margin-top:2px !important;
+  font-size:10px !important;
+  color:#d7e7f2 !important;
+}
+.spark{
+  height:18px !important;
+  margin-top:7px !important;
+  opacity:.85;
+}
+.metricGrid{
+  gap:8px !important;
+}
+.metricMini{
+  min-height:68px !important;
+  border-radius:16px !important;
+  padding:11px 12px !important;
+  background:
+    linear-gradient(135deg, rgba(20,58,89,.64), rgba(39,92,127,.40)) !important;
+  border:1px solid rgba(203,229,244,.15) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.05),
+    0 8px 20px rgba(7,30,53,.08) !important;
+}
+.metricMini .metricNumber{
+  font-size:28px !important;
+  line-height:1 !important;
+  letter-spacing:-.035em !important;
+  font-weight:780 !important;
+}
+.metricMini .metricLabel{
+  font-size:9.5px !important;
+  margin-top:5px !important;
+  line-height:1.2 !important;
+}
+.beatList{
+  gap:6px !important;
+  padding-top:2px;
+}
+.beat{
+  padding:8px 10px !important;
+  border-radius:11px !important;
+  background:rgba(18,54,84,.36) !important;
+  border-color:rgba(203,229,244,.10) !important;
+}
+.beat i{
+  width:7px !important;
+  height:7px !important;
+}
+.beat span{
+  font-size:10.5px !important;
+}
+.beat.active{
+  background:rgba(67,133,174,.38) !important;
+  border-color:rgba(167,229,255,.26) !important;
+  box-shadow:none !important;
+  transform:translateX(3px) !important;
+}
+
 </style>
 </head>
 <body>
@@ -209,17 +327,19 @@ footer{padding:0 2px}
   <header>
     <div class="brand"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaoAAAB4CAYAAACjDrZmAAABSmlDQ1BJQ0MgUHJvZmlsZQAAKJF9kL9LQmEUhh/Lsh8ODdHU4BQEGnGNhhrCJCIQETP6sV2vpoHax71XpK3+h2gPIvoPbGiIltYgKGhqdg1cSm7n00or6sD5zsP7nXN4OdAXNJUq+YFyxbXTq8uhre2dUKDBIH6GGSJsWo6KpVIJaeGzfo/mAz5d7yN61+//f2Mkl3csqW+ShqVsF3yzwqmaqzQfCo/bYkr4WHOhwxeasx2+avdk0nHhO+Exq2jmhJ+Fw9kevdDD5VLV+vCg3QfzlY11qROSkyRYIUmIDFEMFBF5xdUfM3PtmTj70nmAzR4FirgyHxNFUSIvvEYFixnCwnqbwby+9c8bdrUj8bnQEDjraslbuKyK/WRXm1oSK6dws6hM2/y6rK/pd3ajRodH6zBw4nkvmxCYhtaj573WPa91Dv1PcN18B7bfXDhZEkbIAAAAOGVYSWZNTQAqAAAACAABh2kABAAAAAEAAAAaAAAAAAACoAIABAAAAAEAAAGqoAMABAAAAAEAAAB4AAAAAODfZpMAAA9eSURBVHgB7Z3BkqU2EkVfO8be+Jfsqk13hP1L4ykvpj3+pekIe1M1/qXedC966j6cYcBCEqCEBI4iKniAkFJHQlcpBPXm86ePX24ECEAAAhCAQFACXwW1C7MgAAEIQAACdwIIFQ0BAhCAAARCE0CoQlcPxkEAAhCAAEJFG4AABCAAgdAEEKrQ1YNxEIAABCCAUNEGIAABCEAgNAGEKnT1YBwEIAABCCBUtAEIQAACEAhNAKEKXT0YBwEIQAACCBVtAAIQgAAEQhNAqEJXD8ZBAAIQgABCRRuAAAQgAIHQBBCqUfU8P//v9vbdj7evv/n29u/3/xmdZRcCEIAABLYm8Iavp3fIJUovL3/cnp9f/lYHT0//vD0+PNweH7//2zkOQAACEICAL4FLC5W8p/e//JoUpxT2x8eH28PDd7efn35KneYYBCAAAQg4ELikUM0VqBR3eVkIVooMxyAAAQi0JXAZoWohTin0EiwFRCtFh2MQgAAE1hM4vVB5CVQKPV5WigrHIAABCKwjcEqhkjg9v7xMLo5Yh6x8NV5WmRExIAABCNQSOJVQbek91QLGy6olRTwIQAACaQKnEKqIAjXGLcFiifuYCvsQgAAEygQOK1RHEKcUfqYFU1Q4BgEIQGCawOGE6qgClaoCpgVTVDgGAQhAYEjgEEJ1JnEa4u/28LJSVDgGAQhAoCMQWqjOLlCpRoiXlaLCMQhA4MoEQgpV7rt7V6ksCRaLL65S25QTAhDIEQgjVFf0nnIVY+f4vqCRYAsBCFyVwO5ChUDVNz2mBetZERMCEDgPgV2ECnFa14BYfLGOH1dDAALHIrCpUCFQ7RsHXlZ7pqQIAQjEIuAuVBKnPb+7Fwu3nzV4WX5sSRkCENiXgJtQHdl7sgUM79//um/tLMwdL2shOC6DAARCEnARqrfvfqz+r7mRqEignv71uiy89y/ntVT+qIL1+28fBmWJxBpbIAABCNQScBGqr7/5tjb/3eOlxClllARL4UiihVClapJjEIDA0QhcVqhqBSpVoUfxshCqVO1xDAIQOBqBywmVnt+0+uJDdC8LoTra7Yi9EIBAisA/UgfPdmyN95Rj8fPTT/fTEj6tbDzStGCuXJyDAAQgEInAqT0qL4HKVWCkaUE8qlxNcQ4C9QS0itmCBqWpoAGrhf6CLDvGdjmB0wnVHuKUwh9hWvDIQmXv36XY7nls7rTxVuWwTjJqB1nDYS5bz3Yge9//0r2e8vycFqZS/uqLHh6+u0ez2ZfSNUvOW1+z5NrW13jV4WmEKopApSp+Ly/ryEIV9RWHue+o7VGOrTrIVFufOlazElh2//7bf6eScD9uYuo1hW/10lq0ati6w/szg7n3R61dX9VGjBjvLk6viyM+f/p4b+BRR5NqmLJRlag/AgQ8CcgDUGerP3Vie4+4a/OX3RKLPYJsfPvuB9fnzFYvEepkD8Zr8jykUHUjrw93cWo9OtGNokbrccPI1r5orak4roVALQEJVufZ7SMCczwUm26rLdvaeLrPxWaOjWvz1PVRBhEtyrJFGocSqr5AtfaerMF6j6qsUvuCpXIRIOBJQKN5tW2PAVjO7lpvytLY0qvq7nkxWfYMymxeszXB2rpe1ti8x7XhhcrEyWt6ry9QezRYCZbm5ZkW3KP5Xy/PLcVKIrXEU9nKq9oqn5pW1nrgXZPnkeKEfY9KAjX+7l4rsBInNdI9hGmqDBIsBW2X3uBTaXMcAn0CavuPj/stWujbkvptXpVn591N79d5Ujbjof4oF/rL1ucINM+tc1S7c6FW/XmKk4o7R6AirJizaZM5jb5f5RHK0Ldnzm8r+5xrLO7Lyx/ZQYjamS0btmtqt3OX35ZW/amTsqXltTaM4y3pIL3bRmmwpTrIDRR13nMFYM1KOaubNYIpDrn2qDxskDqu19r9UllU11uGNbym7AwhVJ4CNUec+pC8b+R+XjW/Szd+Ko1oZUjZ6HGsxGpLLiWh8rClVH4x9xaCUrk1lV+K48FGZe+m+3/Qz8nQOm/lOf56TQuRUgFKQiXWRw+7PqNSRalBaOTUWoW7xvjjnw+Q61z8yJWpURdL3CPXUBzb1FZ0b+VCzpvJXVdzTkKZS99sK02leT1D6nugqfLIvtb9kdLr14sGCms9qZTtZz22uVB1I7kP905XFdWyQZg4aYTRPTQ+vkCNG56Y6U8Cbzf8OA77EKiZTtT94hFKU9XWQeveV38wFexZ1dR5r+OaqvMKKrstDPPK44zpbiZUJlB4T22akY3QzMtqkyqpnIVAywHgHCbypnJhPLjaw6sqiXjOG8yVjXN+BFyFysTJRhCtbx7dFJrnPqv3VFvtNkpTJzDuCGrTIB4EWhCo9aYsrxqvqiR+llbLrWZl9si3ZRnOlJbL8nQJ1JWWlkdpEDaloi03WZRaiWuHx8AxV9qpQZT6ipwXI/Gztp1Lv/ZcbbmVrwmv+rT+SlHzymrTqrWNeGkCLkLlsaxU8+nR3n1KI41xtOWNHaNEWDGHwB4DFevUp+ycapPmVeXESuWZun4qv9xxiWbJ3v713fOyv555v791X1bvx5GYKZigScwiCJlnW2hZJ32W498uQjXOZOk+4rSUHNddmYA6plInPOXdLOVW6gxL+W3tVamDzb3ftISDCa1t+2Jm5d+qY+/bX2oL/bhzfpswz7lmaVzXZ1RLjbLVe1d/9rSUH9ddi4DuF/vTM1uvjilHtZRnqYM2ryqXR0kMc9emzmnmxwQkdb7lMfHRnz37al2WlrZGTCuMR4X3FLF5YJM3AQ3Gtg7qnEvCMcemUqdbKwY1XlXr6TTjUBLaOTxKcS0veXRez/JLNhztfAiPSg0d7+loTQd7j0rAOudW9lvHO5VebX41XpXHS8Cyb4/XPDRFqH6vJPRTXK90PIRQeb5gd6XKpKwQKBHQi+ItQ6mTrfWmzCZ5GLnQLWrweVG5L1iye6tnMBL6EscckyucCzP1dwXYlBECexFQp9t6muk+Xf/ayeZCrTdlaZhXZQsS7Hh/6/3197HN9+d/L92Kv9YLMKxcEqvW05qW9hm2CNUZapEyQCBDoPUzKcuq9M08iaOHp2Be1VZLvzvx/N6KPdhKxBT6LJaKmZcAa1rz6AGhOnoNYj8EEgQ8PKh+NhKg0rOpTlA6T6R/bYvfXp36XNtMLG3bv77viZVY6bqcF9lP94q/EaperXvf3L2s+AmBOwG1OXtBtBZJTafn8dJ9rX1bxNvaq1pSpr4npmk9iStitITk7YZQvXJDoJY1Hq5aT2Dpc6OSWOl9Ki+xqvGm1pMpp9DCq7KpyfFzqXLu82J0Hlf+U1FKUV5Yyjubl9v5YodY9bcHVomTVkB5fTB3jzKR5zUIqFMtrabTyF1i5RFKIumRZypN86pS52qOmeCqPCZYNdctjdN5WNP/1mRpule47nJCZQKl0SYjlys08XOWUWKltpwL6shbd8Ct08vZX3NOXtWSYCJl10qsJOze5StN/dEnWY0Mt5eY+tMNrecALP8cVj57xyagwZY611znZ95Pq6ktSy8KOfOq5nTwml5LlaNL66/FH62YGStvEbR8zrg9tVBJoJY+AzhjZVOm8xGQWOn7cblgnfLajremo/VYCj32fsZlnfOsSiJV+myV8dL2/uLvyq+g34WxYiFFaTp3XO7afeW/ZZgzaKi165RChUDVVj/xzkBAz1prOt+1MwrWgU8x8+poJbC5vOUJSczWCnGqXMrXvoJuMzMWTzyngt6rmvs+lYf9sq/UNqbKsPS4x2DlNEKFOC1tVlx3dAIawUokcp25yqgOS6K2ZMRb4015dbSyvVQ+lb0m/1pWynMcxlODJmDjeEv2vUR+iS0Rrzn8YgoJlG4+FkdEbF7YtBUBddI1nd3SxQclEazJew2LGhGqEVPZoLQ6wZ72iNbYOvdasasp39x0zxT/kEJl4uS1tFxzulvP656pUVGWfQjUiJW8grnL1msEYIuOtiSGJTHt14o8Kw1uS2n2r/H4jUjVUT2UUJlAeXhPEibdkLqJt57TrasqYkGgTECCofskF+yZTi5O/1xJALbq7GvEsEZU+2VTmhrwblUGy9v6spoy2TVX3oYXKlWoGpHX9J4EysRJN6RuYgIEjkygG8jlxUptvaZTr4mzZWdbEpTuHp6/yq0vWKU81rQNEyiPwfYau6JfG3YxxV2gXv83zZIHvzXQJVCar0eYamgdK859NdbTtM1ebSqVo97fy33Lz8sWvZaRyzdl69SxXMedW/k2ld6a496iaOlrqz7Cvope8iqnyqR+TMHzNZlc/UzZdbTjb17d3i97G91/adFToOaI09LVUXuzJH8IQMCPgPoQCyZitq9tX7i9BiH9/K7yO4RHpZGf54hjjkBdpeIpJwQgMJ9AX3z6v+enxBVzCIQQKnO35xheimtu+1KXvZQ+5yEAAQhAYBsCIYSqZVHxnlrSJC0IQAAC+xM4jVAhUPs3JiyAAAQg4EHg0EKFOHk0CdKEAAQgEIvAYYWqv1IwFlKsgQAEIACBlgTCv/CbKux9oQQv5qbQcAwCEIDA6QgcUqhOVwsUCAIQgAAEJgkgVJNoOAEBCEAAAhEIIFQRagEbIAABCEBgkgBCNYmGExCAAAQgEIEAQhWhFrABAhCAAAQmCSBUk2g4AQEIQAACEQggVBFqARsgAAEIQGCSAEI1iYYTEIAABCAQgQBCNaoF+w+cfMJ/BIZdCEAAAjsROOwnlFry8vxnjS3tJC0IQAACVyRwaaFCoK7Y5CkzBCBwNAKXEyqJk/6jsP5lNNN7R2uu2AsBCFyRwGWECu/pis2bMkMAAmcgcHqhQqDO0EwpAwQgcGUCpxQqxOnKTZqyQwACZyNwKqFCoM7WPCkPBCAAgdvt8EKFONGMIQABCJybwGGFCoE6d8OkdBCAAASMwJvPnz5+sR22EIAABCAAgWgE+IRStBrBHghAAAIQGBBAqAY42IEABCAAgWgEEKpoNYI9EIAABCAwIIBQDXCwAwEIQAAC0QggVNFqBHsgAAEIQGBAAKEa4GAHAhCAAASiEUCootUI9kAAAhCAwIAAQjXAwQ4EIAABCEQjgFBFqxHsgQAEIACBAQGEaoCDHQhAAAIQiEYAoYpWI9gDAQhAAAIDAgjVAAc7EIAABCAQjQBCFa1GsAcCEIAABAYEEKoBDnYgAAEIQCAaAYQqWo1gDwQgAAEIDAggVAMc7EAAAhCAQDQCCFW0GsEeCEAAAhAYEECoBjjYgQAEIACBaAT+D6yZjnxT1DJgAAAAAElFTkSuQmCC" alt="Trase logo"/></div>
     <div class="pills">
-      <span class="pill">Clinical Intake</span>
-      <span class="pill">Nurse Triage</span>
-      <span class="pill">Governed Learning</span>
+      <span class="pill">Trase Agent Lab</span>
+      <span class="pill">Clinical Learning</span>
+      <span class="pill">Governed Mesh</span>
     </div>
   </header>
 
   <main>
     <section class="panel side">
-      <div class="kicker">Agent Lab</div>
-      <div class="heroTitle">Continuous learning inside a clinical workflow</div>
-      <div class="heroSub">A real intake and triage example, narrated slowly while the learning loop unfolds.</div>
+      <div class="sideIntro">
+        <div class="kicker">Agent Lab</div>
+        <div class="heroTitle">Safe agent learning after deployment</div>
+        <div class="heroSub">A clinical workflow example of governed learning that only works with Trase.</div>
+      </div>
 
       <div class="metricPrimary">
         <div class="metricNumber" id="score">+0%</div>
@@ -239,14 +359,15 @@ footer{padding:0 2px}
       </div>
 
       <div class="beatList">
-        <div class="beat active"><i></i><span>Clinical workflow</span></div>
+        <div class="beat active"><i></i><span>Trase context</span></div>
+        <div class="beat"><i></i><span>Clinical workflow</span></div>
         <div class="beat"><i></i><span>Nurse feedback</span></div>
         <div class="beat"><i></i><span>Agent improvement</span></div>
-        <div class="beat"><i></i><span>Governance checks</span></div>
+        <div class="beat"><i></i><span>Governance</span></div>
         <div class="beat"><i></i><span>Artifact published</span></div>
-        <div class="beat"><i></i><span>Peer agent reuse</span></div>
+        <div class="beat"><i></i><span>Peer learning</span></div>
         <div class="beat"><i></i><span>Replay validation</span></div>
-        <div class="beat"><i></i><span>Clinical flywheel</span></div>
+        <div class="beat"><i></i><span>Trase advantage</span></div>
       </div>
     </section>
 
@@ -288,8 +409,8 @@ footer{padding:0 2px}
         <div class="playCard">
           <img src="data:image/png;base64,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" alt="Trase logo"/>
           <div class="playTitle">Agent Lab</div>
-          <div class="playSub">A narrated nurse triage scenario showing how agents learn from human review and from each other.</div>
-          <button class="playBtn" id="startBtn">▶ Play narrated demo</button>
+          <div class="playSub">A narrated clinical scenario showing why safe agent-to-agent learning requires Trase.</div>
+          <button class="playBtn" id="startBtn">▶ Play clinical demo</button>
         </div>
       </div>
     </section>
@@ -308,7 +429,7 @@ footer{padding:0 2px}
 </div>
 
 <script>
-const steps = [{"focus": "all", "q": 0, "a": 0, "g": 0, "wait": 24000, "title": "A real clinical workflow", "sub": "A patient messages the clinic with fever, cough, and asthma history.", "voice": "Let's make this real. Imagine a patient messages the clinic and says, I've had fever and cough for three days, and I use an inhaler for asthma. Do I need to be seen today? What you are seeing here is Agent Lab working inside that clinical workflow. A patient-facing intake agent receives the message. The system captures the full trace. A human nurse can validate or correct the outcome. That learning can improve the original agent. And once the lesson is approved, it can safely help other agents across the care workflow."}, {"focus": "human", "q": 6, "a": 0, "g": 1, "wait": 23000, "title": "Human feedback in the loop", "sub": "The nurse reviews the triage recommendation.", "voice": "Now we move into the human-to-agent loop. The intake agent gathers the symptoms, asks the right follow-up questions, and drafts a triage summary for the nurse. The nurse reviews that recommendation. Maybe the agent did well, but the nurse notices an important clinical nuance. Because the patient has asthma, shortness of breath needs more weight, and the patient should be escalated for same-day review. That human correction is exactly the kind of signal that makes the system smarter."}, {"focus": "agentA", "q": 12, "a": 0, "g": 2, "wait": 22000, "title": "The source agent improves", "sub": "The triage agent learns what better looks like.", "voice": "That feedback now flows back to the source agent. The system learns that in respiratory complaints, asthma history changes the urgency of the route. So the next time a similar patient intake comes in, the agent is more likely to ask the right red-flag questions, summarize the case more cleanly, and recommend the appropriate escalation. One clinical correction has improved one agent."}, {"focus": "gate", "q": 18, "a": 0, "g": 4, "wait": 25000, "title": "Governance checks the lesson", "sub": "Safety, role-aware access, and evaluation guardrails.", "voice": "But before that lesson spreads anywhere else, it passes through governance. This is especially important in healthcare. The system checks the quality of the trace, the safety of the recommendation, the sensitivity of the data, and the clinical policy around who can use the lesson. It evaluates the full context, not just a static role. In other words, is this learning safe, appropriate, and permissioned for reuse?"}, {"focus": "store", "q": 25, "a": 1, "g": 5, "wait": 22000, "title": "A governed artifact is published", "sub": "The approved lesson becomes reusable clinical knowledge.", "voice": "Once it clears the gate, the lesson becomes a structured artifact. For example, this artifact might capture a safe triage pattern for respiratory symptoms in patients with asthma, including the questions to ask, the escalation criteria, and the policy around when to route to a nurse. This is not uncontrolled memory. It is structured, versioned, reviewable clinical knowledge."}, {"focus": "mesh", "q": 33, "a": 2, "g": 6, "wait": 24000, "title": "Another agent benefits immediately", "sub": "The same lesson helps a second clinical workflow.", "voice": "Now the powerful part. A second agent comes into play. Maybe it is a weekend inbox assistant, a call-center triage agent, or a refill workflow that needs to decide whether symptoms require a nurse callback before a medication renewal. That agent has never seen this exact case before. But because the first lesson was validated and approved, it can now use the same clinical pattern at inference time. One approved lesson is now helping multiple agents."}, {"focus": "replay", "q": 41, "a": 3, "g": 8, "wait": 24000, "title": "Replay validates the update", "sub": "Historical triage cases are replayed before rollout.", "voice": "Before this becomes a broader production update, Agent Lab validates it through replay. The system can run historical triage cases back through the updated behavior and compare outcomes. Did the new behavior surface red flags earlier? Did it improve routing quality? Did it stay aligned with policy and safety expectations? If the answer is yes, it can be promoted. If not, it stays contained."}, {"focus": "all", "q": 48, "a": 4, "g": 10, "wait": 26000, "title": "This becomes a learning clinical system", "sub": "One validated correction can improve the wider care team.", "voice": "So stepping back, this is the flywheel. A real patient interaction generates a trace. A nurse improves that result. The lesson is governed. The artifact is published. Other agents benefit. And replay proves the update before broad rollout. That is how a healthcare organization turns day-to-day clinical operations into safe, continuous improvement. One validated correction can improve one agent. One governed artifact can improve the wider agent fleet."}];
+const steps = [{"focus": "all", "q": 0, "a": 0, "g": 0, "wait": 32000, "title": "Why Trase Agent Lab matters", "sub": "Safe learning requires traces, governance, replay, and a knowledge mesh.", "voice": "Trase Agent Lab is the learning infrastructure layer for production agents. It is what turns real work into governed improvement. Most teams can build an agent. Some teams can log what happened. But that is not enough. To make agents improve safely after deployment, you need normalized execution traces, human feedback, curated knowledge artifacts, peer to peer learning, replay validation, and policy controls all working together. That is where Trase is different. Without Trase, these pieces stay fragmented across prompts, dashboards, model vendors, and manual review queues. With Trase, a validated correction can become safe, auditable, reusable learning across the agent fleet. In practical terms, you cannot do this safely and repeatedly without Trase."}, {"focus": "all", "q": 2, "a": 0, "g": 0, "wait": 26000, "title": "A real clinical workflow", "sub": "A patient messages the clinic with cough, fever, and asthma history.", "voice": "Now let's make it real. Imagine a patient messages the clinic and says, I have had fever and cough for three days, and I use an inhaler for asthma. Do I need to be seen? The intake agent receives the message and begins collecting structured context. It does not diagnose. It does not replace the nurse. It prepares the clinical handoff: symptoms, duration, asthma history, current breathing status, medication use, and any red flags that need urgent attention."}, {"focus": "human", "q": 8, "a": 0, "g": 1, "wait": 28000, "title": "Nurse review creates the signal", "sub": "The nurse validates or corrects the triage handoff.", "voice": "Now we move into the human to agent loop. The intake agent drafts a triage summary for the nurse. The nurse reviews it and notices an important clinical detail. In a patient with asthma and respiratory symptoms, the handoff should explicitly check red flags: shortness of breath, wheezing, chest tightness, whether the reliever inhaler is helping, whether the patient is struggling to speak or walk, and any blue, gray, or pale lips or fingernails. If those danger signs are present, the route should escalate immediately according to the clinic's protocol. The nurse correction becomes the learning signal."}, {"focus": "agentA", "q": 15, "a": 0, "g": 2, "wait": 23000, "title": "The intake agent improves", "sub": "The lesson starts with one clinical agent.", "voice": "That feedback flows back to the intake agent. The lesson is not simply, asthma equals same day visit. That would be too blunt. The better lesson is more precise: when respiratory symptoms appear with asthma history, the agent should capture the right red flag questions and prepare a safer nurse handoff. So the next similar intake is more complete, more useful, and easier for a clinician to act on."}, {"focus": "gate", "q": 21, "a": 0, "g": 4, "wait": 30000, "title": "Governance checks the lesson", "sub": "Safety, access policy, evals, and clinical context.", "voice": "This is the critical production step. Before that lesson can spread, it passes through Trase governance. The system checks whether the trace is high quality, whether the proposed artifact is safe, whether protected information is handled correctly, whether the lesson belongs in this clinical domain, and whether the agent that wants to use it is authorized to do so. This is not just static role based access. Trase evaluates the execution context and trajectory. That matters in healthcare, because a lesson can be useful in one workflow and inappropriate in another. The gate decides what is safe to share, who can consume it, and under what conditions."}, {"focus": "store", "q": 28, "a": 1, "g": 5, "wait": 24000, "title": "A governed artifact is published", "sub": "Structured clinical learning, not uncontrolled memory.", "voice": "Once the lesson clears the gate, it becomes a structured knowledge artifact. For this example, the artifact might encode a respiratory intake pattern for patients with asthma: what to ask, what to summarize, what red flags to surface, and when to route the case to a nurse or urgent channel under the clinic's protocol. This is not uncontrolled memory. It is versioned, auditable, permissioned clinical knowledge."}, {"focus": "mesh", "q": 36, "a": 2, "g": 6, "wait": 27000, "title": "Peer agents benefit", "sub": "The lesson helps another workflow without new labeling.", "voice": "Now the agent to agent learning moment. A second agent enters the workflow. Maybe it supports after hours inbox triage. Maybe it helps a call center prepare nurse callbacks. Maybe it reviews refill requests and notices the patient is also reporting worsening respiratory symptoms. That second agent did not personally receive the original nurse feedback. But because Trase turned the correction into a governed artifact, the peer agent can use the same clinical pattern at inference time. One nurse correction improves the first agent directly, and then improves other authorized agents through the Trase mesh."}, {"focus": "replay", "q": 44, "a": 3, "g": 8, "wait": 26000, "title": "Replay validates the update", "sub": "Historical cases are tested before rollout.", "voice": "Before the update becomes broader production behavior, Trase validates it through replay. Historical intake and triage traces can be run through the updated behavior and compared side by side. Did the agent ask better questions? Did it surface the right red flags? Did it reduce missed escalation risks without over routing every patient? Did it stay aligned with clinical policy and safety expectations? If the update passes, it can be promoted. If it does not, it stays contained. And because artifacts and policies are versioned, rollback is immediate."}, {"focus": "all", "q": 52, "a": 4, "g": 10, "wait": 30000, "title": "The Trase advantage", "sub": "One validated correction can improve the wider care team.", "voice": "This is the Trase advantage. A real patient interaction generates a trace. A nurse improves that result. Trase governs the lesson, publishes it as an artifact, shares it with authorized peer agents, and validates the change through replay before rollout. That is how a clinical organization turns day to day operations into safe continuous improvement. Without Trase, the lesson usually stays trapped in one review, one prompt, or one model configuration. With Trase, that same lesson becomes controlled, auditable, reusable learning across the agent fleet."}];
 
 const focusMap = {
   all:{nodes:["human","agentA","agentB","store","replay","router","gate"],beams:["human","agentA","store","agentB","replay","router"],packets:["human","agentA","store","agentB","gate","replay"]},
@@ -379,6 +500,16 @@ function setFocus(name){
   if(active) rippleAt(active);
 }
 
+function setFlowDirection(step){
+  $$(".beam,.packet").forEach(el => el.classList.remove("reverse"));
+  if(step.focus === "agentA"){
+    [".b-human",".b-agentA",".path-human",".path-agentA"].forEach(sel => {
+      const el = $(sel);
+      if(el) el.classList.add("reverse");
+    });
+  }
+}
+
 function pickVoice(){
   if(!("speechSynthesis" in window)) return null;
   const voices = window.speechSynthesis.getVoices();
@@ -409,6 +540,7 @@ function applyStep(n){
   const s = steps[n];
   idx = n;
   setFocus(s.focus);
+  setFlowDirection(s);
   $("#caption").textContent = s.title;
   $("#subcaption").textContent = s.sub;
   animNum($("#score"), s.q, "+", "%");
